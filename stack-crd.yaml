@@ -1,0 +1,20 @@
+---
+apiVersion: openfaas.com/v1
+kind: Function
+metadata:
+  name: yolo-server 
+  namespace: openfaas-fn
+spec:
+  name: yolo-server
+  image: yukiozhu/yolo-server:latest
+  limits:
+    cpu: "200m"
+    memory: "256Mi"
+    gpucore: "50"
+    gpumemo: "8"
+  requests:
+    cpu: "10m"
+    memory: "128Mi"
+    gpucore: "50"
+    gpumemo: "8"
+
